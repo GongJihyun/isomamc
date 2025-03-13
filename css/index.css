@@ -1,0 +1,818 @@
+@charset "UTF-8";
+/* 세방고딕, 프리텐다드 폰트 연결 */
+@import url("https://cdn.jsdelivr.net/gh/fonts-archive/SEBANGGothic/SEBANGGothic.css");
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+
+@keyframes ani1 {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(1920px);
+    }
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Pretendard';
+    font-size: 22px;
+    line-height: 1.5;
+    color: #59524C;
+    min-width: 1320px;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+/* 헤더 */
+.header {
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px 0;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 100;
+}
+
+.header_in {
+    max-width: 1320px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.logo {
+    display: block;
+}
+
+.brown {
+    display: none;
+}
+
+.menu {
+    display: flex;
+}
+
+.menu>li>a {
+    font-size: 20px;
+    display: block;
+    color: #fff;
+    padding: 20px 55px;
+    font-family: "SEBANG Gothic";
+}
+
+/* 슬라이드 배너 */
+
+.bg1 {
+    background: url(../images/bg1.png) no-repeat center top / cover;
+    width: 100%;
+    height: 967px;
+}
+
+.bg2 {
+    background: url(../images/bg2.png) no-repeat center top / cover;
+    width: 100%;
+    height: 967px;
+}
+
+.bg3 {
+    background: url(../images/bg3.png) no-repeat center top / cover;
+    width: 100%;
+    height: 967px;
+}
+
+
+/* 스크롤을 내리면 scroll-menu에 scroll-fixed 클래스가 생겨남, scroll-fixed가 생길 때 꾸며주기 */
+.scroll-fixed {
+    background-color: #fff;
+    transition: all 1s;
+    z-index: 300;
+}
+
+.scroll-fixed .logo {
+    display: none;
+}
+
+.scroll-fixed .brown {
+    display: block;
+}
+
+.scroll-fixed .menu>li>a {
+    color: #7A5C52;
+}
+
+.scroll-fixed .menu>li>a:hover {
+    color: #D79F87;
+}
+
+.mySwiper {
+    width: 100%;
+}
+
+.mySwiper .swiper-pagination {
+    top: auto;
+    bottom: 60px;
+}
+
+.mySwiper .swiper-pagination-bullet-active {
+    background-color: #7A5C52;
+}
+
+.mySwiper .swiper-pagination-bullet {
+    background-color: #59524C;
+}
+
+.text {
+    width: 1320px;
+    left: 0;
+    margin: 350px auto 0;
+    color: #fff;
+
+}
+
+.text h1,
+.text h2 {
+    font-family: "SEBANG Gothic";
+    font-weight: 400;
+}
+
+.text h1 {
+    font-size: 55px;
+}
+
+.text h2 {
+    font-size: 25px;
+    letter-spacing: 2.5px;
+}
+
+.text p {
+    font-size: 22px;
+    padding-top: 30px;
+}
+
+.text .letter {
+    letter-spacing: -1px;
+}
+
+.line {
+    display: flex;
+    padding: 60px 20px 0 0;
+}
+
+.text span {
+    border: 1px solid #fff;
+    width: 380px;
+    height: 0;
+    margin: 45px 5px;
+}
+
+/* contents1 */
+.contents1 {
+    margin: 60px 0;
+}
+
+.contents1_in {
+    width: 1320px;
+    margin: 30px auto;
+    text-align: center;
+}
+
+.list {
+    display: flex;
+    padding: 60px 0 50px 0;
+    justify-content: space-around;
+}
+
+.list li {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.list span {
+    color: #D79F87;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.list p {
+    color: #D79F87;
+
+}
+
+h2 {
+    font-size: 50px;
+}
+
+h4 {
+    font-size: 20px;
+    padding-top: 10px;
+    font-weight: 400;
+}
+
+p {
+    font-size: 22px;
+}
+
+/* 흘러가는 글자 */
+
+/* 공통 소스 */
+/* Container DIV - automatically generated */
+.simply-scroll-container {
+    position: relative;
+}
+
+/* Clip DIV - automatically generated */
+.simply-scroll-clip {
+    position: relative;
+    overflow: hidden;
+}
+
+/* UL/OL/DIV - the element that simplyScroll is inited on
+Class name automatically added to element */
+.simply-scroll-list {
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.simply-scroll-list li {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.simply-scroll-list li img {
+    border: none;
+    display: block;
+}
+
+/* Custom class modifications - adds to / overrides above
+
+.simply-scroll is default base class */
+
+
+/* 가로슬라이드 - customclass 내가 지은 이름으로 수정하기 ( simplay-scroll이 기본이름 )*/
+/* Container DIV */
+.s1 {
+    width: 100%;
+    overflow: hidden;
+}
+
+/* Clip DIV */
+.s1 .simply-scroll-clip {
+    width: 100%;
+    /* 너비 수정하기 */
+
+}
+
+/* Explicitly set height/width of each list item */
+.s1 .simply-scroll-list li {
+    float: left;
+    /* Horizontal scroll only */
+    width: 2000px;
+    margin-right: 100px;
+    color: #DFD6D1;
+}
+
+.contents1 h1 {
+    font-size: 130px;
+}
+
+
+/* contents2 */
+.contents2 {
+    background: #fff;
+    margin: auto;
+    height: 1460px;
+    overflow: hidden;
+}
+
+.contents2_bg {
+    height: 1140px;
+    background: #F3EFED;
+}
+
+.contents2_in {
+    width: 1320px;
+    margin: auto;
+    padding: 100px 0;
+    position: relative;
+}
+
+.contents2_in h2 {
+    text-align: center;
+}
+
+.contents2 .textbox {
+    width: 1320px;
+    margin: 100px auto;
+    display: flex;
+    justify-content: space-between;
+    color: #59524C;
+}
+
+.contents2 .text1 {
+    width: 520px;
+    padding-top: 30px;
+}
+
+.contents2 .text1 h3 {
+    font-size: 40px;
+}
+
+.contents2 .text2 {
+    width: 470px;
+}
+
+.contents2 .text2 p {
+    padding: 20px 0;
+}
+
+.contents2 .medical {
+    position: absolute;
+    right: -300px;
+    top: 900px;
+
+}
+
+.title {
+    position: absolute;
+    bottom: 370px;
+    left: 165px;
+    font-weight: bold;
+}
+
+.title:hover {
+    color: #7A5C52;
+    transition: 0.3s;
+}
+
+.circle {
+    width: 965px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    gap: 140px 150px;
+    padding: 100px 0 0 355px;
+}
+
+.circle li {
+    z-index: 200;
+}
+
+.circle li a:hover {
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+
+.circle li a {
+    display: block;
+    border: 1px solid #AC988F;
+    border-radius: 100%;
+    background-color: #fff;
+    width: 214px;
+    height: 214px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #AC988F;
+
+}
+
+.car {
+    z-index: 100;
+    color: #59524C;
+    top: 540px;
+    left: -150px;
+    position: absolute;
+    animation: ani1 20s linear infinite;
+}
+
+/* contents3 */
+/* 슬라이드 */
+
+.contents3 {
+    margin-bottom: 200px;
+    overflow: hidden;
+}
+
+.contents3_in {
+    width: 1320px;
+    margin: 50px auto;
+    position: relative;
+}
+
+.contents3_in h2 {
+    text-align: center;
+}
+
+.wrap {
+    display: flex;
+    justify-content: space-between;
+    padding: 100px 0;
+    gap: 80px;
+}
+
+.contents3_in h3 {
+    font-size: 40px;
+}
+
+.contents3 .textbox {
+    width: 400px;
+    position: relative;
+}
+
+.contents3 .textbox p {
+    padding: 35px 0 55px 0;
+}
+
+
+.c3 {
+    width: 1130px;
+    position: absolute;
+    right: -300px;
+}
+
+.c3 img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: 1s;
+}
+
+.back:hover {
+    opacity: 1;
+}
+
+.c3 .swiper-slide {
+    position: relative;
+}
+
+.contents3_in .textbox .swiper-button-next:after,
+.contents3_in .textbox .swiper-button-prev:after {
+    content: '';
+}
+
+.pass1 {
+    left: 0;
+    top: 300px;
+}
+
+.pass2 {
+    left: 80px;
+    top: 300px;
+}
+
+/* contents4 */
+.contents4 {
+    background: url(../images/banner_watch.png) no-repeat center center;
+    height: 540px;
+    margin: auto;
+    color: #fff;
+    text-align: center;
+    padding: 80px 0;
+}
+
+.contents4 span {
+    color: #D79F87;
+}
+
+.contents4 h2 {
+    padding-bottom: 20px;
+    font-size: 40px;
+}
+
+.contents4 h3 {
+    font-size: 40px;
+    padding-top: 5px;
+}
+
+.contents4 .textbox {
+    width: 700px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+   padding-top: 100px;
+}
+
+.contents4 .textbox p {
+    font-weight: bold;
+}
+
+
+/* contents5 */
+.contents5 {
+    width: 1320px;
+    margin: 0 auto 100px;
+    text-align: center;
+}
+
+.contents5 span {
+    color: #D79F87;
+}
+
+.contents5 h1 {
+    font-size: 70px;
+    color: #F3EFED;
+}
+
+.program {
+    display: flex;
+    justify-content: space-between;
+    margin: 80px 0 50px 0;
+    box-sizing: border-box;
+}
+
+.program .program_box {
+    background-color: #D79F87;
+    padding: 20px;
+    border-radius: 30px;
+    width: 260px;
+    height: 380px;
+    color: #fff;
+    flex-wrap: wrap;
+
+}
+
+.program img {
+    padding: 20px 0 30px 0;
+}
+
+.programpass {
+    padding: 180px 15px;
+}
+
+/* contents6 */
+.contents6 {
+    position: relative;
+    margin: 50px auto;
+}
+
+.contents6_in {
+    background: linear-gradient(#fff 100px, #D79F87 10px);
+    width: 100%;
+
+}
+
+.c6 {
+    width: 1320px;
+    margin: auto;
+    height: 300px;
+    padding-top: 100px;
+}
+
+.contents6 .bn1 {
+    position: absolute;
+    bottom: -80px;
+    left: -20px;
+}
+
+.contents6 .bn2 {
+    position: absolute;
+    bottom: -128px;
+    left: -40px;
+}
+
+.banner_text {
+    width: 900px;
+    padding: 60px 0 0 600px;
+    color: #fff;
+
+}
+
+.banner_text p {
+    padding: 20px 0 25px 0;
+}
+
+.banner_text a {
+    font-weight: bold;
+}
+
+.banner_text h3 {
+    font-size: 40px;
+}
+
+.contents6 a:hover {
+    color: #7A5C52;
+    transition: 0.3s;
+}
+
+/* contents7 */
+.contents7 {
+    width: 1320px;
+    margin: 150px auto;
+    text-align: center;
+}
+
+.contents7 h3 {
+    font-size: 40px;
+    padding: 10px 0;
+
+}
+
+.contents7 h2 {
+    padding-bottom: 40px;
+}
+
+.contents7 span {
+    color: #D79F87;
+}
+
+.video {
+    margin: 50px 0;
+    width: 1320px;
+    height: 785px;
+    background: url(../images/youtube.png)no-repeat center center;
+}
+
+/* contents8 */
+.contents8 {
+    width: 1320px;
+    margin: 0px auto;
+}
+
+.contents8 h2 {
+    text-align: center;
+}
+
+.contents8 h4 {
+    font-size: 26px;
+    font-weight: bold;
+    padding-bottom: 20px;
+}
+
+.contents8 p {
+    padding-bottom: 10px;
+}
+
+.contents8 .letter {
+    letter-spacing: -1px;
+}
+
+.noti {
+    display: flex;
+    justify-content: space-between;
+    padding: 100px 0;
+}
+
+.noti li {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.noti li:nth-child(2) {
+    border-left: solid 2px #59524C;
+    border-right: solid 2px #59524C;
+}
+
+.contents8 .textbox {
+    width: 204px;
+}
+
+
+.contents8 h4 span::before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 20px;
+    background-color: rgba(215, 159, 135, 0.7);
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    transition: 0.5s;
+    z-index: -1;
+}
+
+.contents8 h4 span {
+    position: relative;
+}
+
+/* contents9 */
+.contents9 iframe {
+    width: 100%;
+    display: block;
+}
+
+/* footer */
+footer {
+    background-color: #59524C;
+}
+
+.footer_in {
+    width: 1320px;
+    margin: auto;
+    padding: 40px 0;
+}
+
+footer p {
+    color: #fff;
+}
+
+.footer_wrap {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.footertext ul {
+    display: flex;
+    gap: 25px;
+    padding-bottom: 10px;
+    font-size: 16px;
+}
+
+.footertext ul li a:hover {
+    text-decoration: underline;
+}
+
+footer hr {
+    margin: 20px 0;
+}
+
+footer p {
+    font-size: 14px;
+}
+
+.footericon a {
+    padding-left: 5px;
+    opacity: 0.5;
+}
+
+.footericon a:hover {
+    opacity: 1;
+}
+
+/* 오른쪽 top , sns 고정 버튼 */
+.fixed_bt {
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
+    z-index: 1000;
+}
+
+.fixed_bt ul {
+    background-color: #D79F87;
+    padding: 10px 10px;
+    border-radius: 20px;
+}
+
+.fixed_line {
+    align-items: center;
+    border-bottom: solid 1px #fff;
+    margin: 20px 0;
+
+}
+
+.top {
+    display: block;
+    background: #fff;
+    border-radius: 20px;
+    width: 90px;
+    box-sizing: border-box;
+    margin-top: 10px;
+}
+
+.top img {
+    display: block;
+    margin: auto;
+}
+
+
+.fixed_bt ul li a:hover {
+    opacity: 0.8;
+}
+
+.fixed_bt .top:hover {
+    transform: translate(0px, 3px);
+    box-shadow: 0px 0px 0 #999;
+    transition: 0.3s;
+}
