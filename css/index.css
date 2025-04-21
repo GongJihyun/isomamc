@@ -13,9 +13,6 @@
     }
 
 }
-html{
-    scroll-behavior: smooth;
-}
 
 * {
     margin: 0;
@@ -185,7 +182,7 @@ a {
 
 /* contents1 */
 .contents1 {
-    padding: 80px 0;
+    margin: 60px 0;
 }
 
 .contents1_in {
@@ -303,7 +300,7 @@ Class name automatically added to element */
 .contents2 {
     background: #fff;
     margin: auto;
-    height: 1380px;
+    height: 1460px;
     overflow: hidden;
 }
 
@@ -315,7 +312,7 @@ Class name automatically added to element */
 .contents2_in {
     width: 1320px;
     margin: auto;
-    padding: 100px 0 0;
+    padding: 100px 0;
     position: relative;
 }
 
@@ -357,7 +354,7 @@ Class name automatically added to element */
 
 .title {
     position: absolute;
-    bottom: 270px;
+    bottom: 370px;
     left: 165px;
     font-weight: bold;
 }
@@ -414,7 +411,7 @@ Class name automatically added to element */
 /* 슬라이드 */
 
 .contents3 {
-    padding: 100px 0 150px 0;
+    margin-bottom: 200px;
     overflow: hidden;
 }
 
@@ -500,7 +497,7 @@ Class name automatically added to element */
     margin: auto;
     color: #fff;
     text-align: center;
-    padding-top: 80px;
+    padding: 80px 0;
 }
 
 .contents4 span {
@@ -533,8 +530,7 @@ Class name automatically added to element */
 /* contents5 */
 .contents5 {
     width: 1320px;
-    margin: auto;
-    padding-top: 130px;
+    margin: 0 auto 100px;
     text-align: center;
 }
 
@@ -631,7 +627,7 @@ Class name automatically added to element */
 /* contents7 */
 .contents7 {
     width: 1320px;
-    margin: 150px auto 0;
+    margin: 150px auto;
     text-align: center;
 }
 
@@ -649,18 +645,14 @@ Class name automatically added to element */
     color: #D79F87;
 }
 
-.video {
-    margin: 50px 0;
-    width: 1320px;
-    height: 785px;
-    background: url(../images/youtube.png)no-repeat center center;
+iframe{
+    padding-top: 30px;
 }
 
 /* contents8 */
 .contents8 {
     width: 1320px;
     margin: 0px auto;
-    padding: 100px 0 50px 0;
 }
 
 .contents8 h2 {
